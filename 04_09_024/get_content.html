@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-3.7.1.min.js"></script>
+<script>
+$(document).ready(function(){
+
+  $("#btn1").click(function(){
+    let content =  $("#test").text();
+
+    $("h1").html(content);
+
+  });
+
+
+  // $("#btn2").click(function(){
+  //  let content = $("#test").html();
+  // });
+
+  $("#btn2").click(function(){
+    alert("HTML: " + $("#test").html());
+  });
+
+});
+</script>
+</head>
+<body>
+
+<p id="test">This is some <b>bold</b> text in a <br> paragraph.</p>
+
+<button id="btn1">Show Text</button>
+<button id="btn2">Show HTML</button>
+
+
+<h1></h1>
+
+</body>
+</html>

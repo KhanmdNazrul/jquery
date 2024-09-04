@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-3.7.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#show").click(function(){
+        let x = $(".a").val();
+        let y = $(".b").val();
+        let c = x + " " + y;
+        $("#1,#2,.v").html(c);
+    })
+});
+</script>
+</head>
+<body>
+    <textarea name="" id="2"></textarea>
+
+ 
+
+<form action="">
+    <input class="a" type="text" placeholder="First name" name="" id=""><br>
+    <input class="b" type="text" placeholder="Last Name" name="" id=""><br>
+    <textarea name="" id="1"></textarea>
+    <button type="button" id ="show">Show</button>
+</form>
+
+
+
+
+<h1 class="v"></h1>
+</body>
+</html>
