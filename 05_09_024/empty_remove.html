@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../04_09_024/jquery-3.7.1.min.js"></script>
+    <style>
+        .a{
+            font-size: 26px;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+$(document).ready(function(){
+
+    $(".1").click(function(){
+      $(".a").empty();
+    })
+
+    $(".2").click(function(){
+        $("div").remove();
+    })
+
+
+})
+</script>
+
+<div class="a" style="background-color: aqua;">
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo velit accusantium minima quo, aspernatur molestias architecto quidem earum eveniet. Optio dolorem excepturi illo ipsum laborum eveniet aperiam perferendis delectus earum quis explicabo, adipisci tempora vitae quae nobis dicta molestias ullam! Iusto, quod. Illo, at corporis magnam ut dicta voluptates. Explicabo.</p>
+</div>
+
+<div>Div without class</div>
+
+
+
+    <button class="1">empty</button> <button class="2">remove</button>
+</body>
+</html>

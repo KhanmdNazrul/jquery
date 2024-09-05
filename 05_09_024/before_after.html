@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../04_09_024/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<script>
+$(document).ready(function(){
+
+    $(".1").click(function(){
+        $("ol").before("<p>Cumilla</p>");
+    })
+
+    $(".2").click(function(){
+        $("ol").after("<p>Noakhali</p>");
+    })
+
+
+})
+</script>
+
+<ol>
+    <li>Dhaka</li>
+    <li>Chattagram</li>
+    <li>Sylhet</li>
+</ol>
+
+    <button class="1">before</button> <button class="2">after</button>
+</body>
+</html>

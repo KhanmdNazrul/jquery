@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../04_09_024/jquery-3.7.1.min.js"></script>
+    <style>
+        .a{border: 2px;
+            background-color: aqua;
+            font-size: 26px;
+            color: yellow;
+        }
+        .b{border: 2px;
+            background-color: bisque;
+            font-size: xx-large;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+$(document).ready(function(){
+
+    $(".1").click(function(){
+      $("p").addClass(".b");
+    })
+
+    $(".2").click(function(){
+      $("p").removeClass(".a");
+    })
+
+   
+
+})
+</script>
+<div class="a"><p>Every night in My dreams</p></div>
+
+
+
+    <button class="1">Show</button> <button class="2">remove</button>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery get method</title>
+
+    <script src="../04_09_024/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    </select>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#show").click(function(){
+                $.get("./get_data.php",function(data,status){
+                    alert(data+"\n"+status);
+                })
+            })
+        })
+    </script>
+
+    <button id="show">Click Here</button>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../04_09_024/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jquery load method</title>
+    </head>
+    <body>
+        <script>
+            $(document).ready(function(){
+
+                $(".1").click(function(){
+                    $("#show").load("./sample.txt");
+                })
+
+
+            })
+        </script>
+
+        <div id="show">Data will load Here</div>
+        <button class="1">Click to load</button>
+    </body>
+    </html>
+</body>
+</html>
