@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Entry</title>
+    <script src="../04_09_024/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <script>
+        $(document).ready(function(){
+
+          $("#diva").load("get_data.php")
+
+            $("#btn1").click(function(){
+            let formData = $("#studentform").serialize();
+
+            $.post("insert.php",{mydata:formData}, function(data,status){
+                $("h1").html(data);
+            })
+            $("#diva").load("get_data.php")
+
+            });
+        
+           
+            
+
+            
+        });
+
+    </script>
+    <h1></h1>
+
+
+    <h2>Student Registration Form</h2>
+
+    <form action="" id="studentform">
+        <fieldset style="width: fit-content">
+            <legend>Student Registration Form</legend>
+        Name: <br>
+         <input type="text" name="name"><br>
+        Gender: Male <input type="radio" name="gender" value="Male" >  Female <input type="radio" name="gender" value="Female"><br>
+        Date of Birth: <br><input type="date" name="dob" ><br>
+        Email:<br> <input type="email" name="email" ><br>
+        Phone:<br> <input type="text" name="phone" ><br>
+        Address: <br> <textarea name="address"></textarea><br>
+        <input type="button" name="submit" value="submit" id="btn1">
+    </fieldset>
+    </form>
+
+
+    <div id="diva">
+
+    </div>
+
+
+</body>
+</html>
