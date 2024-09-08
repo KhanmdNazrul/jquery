@@ -10,23 +10,20 @@
 
     <script>
         $(document).ready(function(){
-
+           
           $("#diva").load("get_data.php")
-
+         
             $("#btn1").click(function(){
             let formData = $("#studentform").serialize();
 
             $.post("insert.php",{mydata:formData}, function(data,status){
                 $("h1").html(data);
             })
-            $("#diva").load("get_data.php")
-
+           // $("#diva").load("delete.php");
+           $("#diva").load("get_data.php");
+            
             });
-        
            
-            
-
-            
         });
 
     </script>
@@ -47,7 +44,7 @@
         Address: <br> <textarea name="address"></textarea><br>
         <input type="button" name="submit" value="submit" id="btn1">
     </fieldset>
-    </form>
+    </form><br>
 
 
     <div id="diva">

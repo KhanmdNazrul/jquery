@@ -25,6 +25,7 @@ $sql = $connect->query("SELECT * FROM students");
         <th>EMAIL</th>
         <th>PHONE</th>
         <th>ADDRESS</th>
+        <th>ACTION</th>
     </tr>
     <?PHP 
     while($row = $sql->fetch_assoc()){?>
@@ -36,9 +37,27 @@ $sql = $connect->query("SELECT * FROM students");
             <td><?php echo $row['email'] ?></td>
             <td><?php echo $row['phone'] ?></td>
             <td><?php echo $row['address'] ?></td>
+            <td><a href="#" class="stid" value="<?php echo $row['id'] ?>">Delete</a></td>
         </tr>
     <?php } ?>
 </table>
+
+<script>
+    $(document).ready(function(){
+        $(".stid").on('click',function(event){
+            event.preventDefault();
+
+            let sid= $(this).attr('value');
+            //alert(sid);
+
+            $.post("delete.php",{id:sid},function(data, status){
+                alert(data + " From Database");
+            })
+
+        })
+
+    })
+</script>
 </body>
 </html>
 
